@@ -8,12 +8,13 @@
         :root {
             --primary-pink: #ffb7b2;
             --accent-orange: #ffdac1;
-            --text-dark: #3a3a3a; /* Darkened slightly for readability */
+            --text-dark: #3a3a3a;
             --text-muted: #6e6e6e;
-            --time-blue: #4f83cc; /* Darkened slightly for readability */
+            --time-blue: #4f83cc;
             --tag-no-beef: #ee5253;
             --tag-budget: #26af61;
             --tag-express: #8e44ad;
+            --tag-appendix: #fdcb6e;
         }
 
         body {
@@ -23,28 +24,24 @@
             margin: 0;
             padding: 15px;
             
-            /* --- THE NEW SEMI-TRANSPARENT, BLENDED BACKGROUND --- */
-            /* 1. Add your custom diorama image */
-            background-image: url('osaka_diorama_bg.jpg'); /* YOU MUST CHANGE THIS URL */
-            /* 2. Blend it with a semi-transparent textured overlay for a natural paper look */
-            background-color: rgba(255, 250, 240, 0.5); /* A warm, creamy paper tone */
-            background-blend-mode: overlay; /* This blends the image with the overlay color */
-            background-attachment: fixed; /* Keep it fixed during scroll */
-            background-size: cover; /* Make it cover the whole screen */
-            background-position: center; /* Center the diorama image */
-            /* --------------------------------------------------- */
+            /* --- 背景圖片與半透明紙張質感融合 --- */
+            background-image: url('osaka_diorama_bg.jpg'); 
+            background-color: rgba(255, 250, 240, 0.5); 
+            background-blend-mode: overlay; 
+            background-attachment: fixed; 
+            background-size: cover; 
+            background-position: center; 
         }
 
         .container {
             max-width: 650px;
             margin: 20px auto;
-            /* Make the container a clean glass box that integrates with the background */
-            background: rgba(255, 255, 255, 0.7); /* High transparency for blending */
-            backdrop-filter: blur(8px); /* Blend the text-heavy cards into the image */
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(8px); 
             -webkit-backdrop-filter: blur(8px);
             padding: 30px 20px;
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(255, 183, 178, 0.15); /* Warmer shadow */
+            box-shadow: 0 10px 30px rgba(255, 183, 178, 0.15); 
             border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
@@ -77,7 +74,7 @@
         }
 
         .day-card {
-            background: rgba(255, 255, 255, 0.75); /* High transparency within glass boxes */
+            background: rgba(255, 255, 255, 0.75); 
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 25px;
@@ -121,8 +118,8 @@
 
         .time {
             font-weight: 700;
-            color: white; /* Contrast with blue box */
-            background: rgba(112, 161, 255, 0.9); /* Opaque blue box */
+            color: white; 
+            background: rgba(112, 161, 255, 0.9); 
             min-width: 85px;
             flex-shrink: 0;
             padding: 2px 6px;
@@ -233,6 +230,31 @@
 
         .tips-box li {
             margin-bottom: 8px;
+        }
+
+        /* 附錄專屬樣式 */
+        .appendix-card {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 15px;
+            border: 1px solid rgba(253, 203, 110, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+        }
+        
+        .mall-item {
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .mall-name {
+            font-weight: 700;
+            color: #d35400;
+            display: inline-block;
+            background: rgba(253, 203, 110, 0.2);
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-right: 5px;
         }
 
         .footer {
@@ -352,6 +374,30 @@
             <li><b>甜蜜分食：</b> Cafe 兩人 share 一份甜品，省錢又能試更多口味，還更甜蜜！</li>
             <li><b>高光小確幸：</b> 大開銷用公數，但陪 🐻 在 PARCO 扭蛋（¥400）或去販賣機投熱茶（¥160）時你掏錢，小錢買大貼心！</li>
         </ul>
+    </div>
+
+    <div class="section-title">✨ Appendix：難波・心齋橋必逛商場地圖</div>
+    <div class="appendix-card">
+        <div class="mall-item">
+            <span class="mall-name">心齋橋 PARCO</span>
+            <strong>潮流、動漫、吉伊卡哇天堂！</strong><br>
+            主要進攻 <b>6 樓動漫街</b>。除了 🐻 最愛的 Chiikawa 專賣店、吉卜力橡子共和國，還有超多精緻的扭蛋機與動漫周邊，非常適合拍照打卡。
+        </div>
+        <div class="mall-item">
+            <span class="mall-name">大丸百貨 (心齋橋店)</span>
+            <strong>就在 PARCO 隔壁（有連通道）</strong><br>
+            與 PARCO 完美相連。必去 <b>9 樓專區</b>，這裡有規模超大的 <b>Pokémon Center（寶可夢中心）</b> 和美少女戰士等經典專櫃，精品與專櫃化妝品也在這裡。
+        </div>
+        <div class="mall-item">
+            <span class="mall-name">難波公園 (Namba Parks)</span>
+            <strong>綠意盎然的梯田式建築商場</strong><br>
+            離酒店非常近。服飾風格比較偏向日系文青與質感選物，商場頂樓的花園景觀很美，適合兩個人晚上輕鬆散步。
+        </div>
+        <div class="mall-item">
+            <span class="mall-name">難波高島屋 (Takashimaya)</span>
+            <strong>南海難波站出閘直達</strong><br>
+            伴手禮與美食地下街（B1）的終極大本營！如果想買精緻的日式傳統甜點、高級水果（如哈密瓜、長野葡萄）回酒店當宵夜，去這裏準沒錯。
+        </div>
     </div>
 
     <div class="footer">
