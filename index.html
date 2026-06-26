@@ -2,231 +2,352 @@
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
-    <title>👦🏻與🐻大阪之旅 - 前3天終極指南 (USJ更新版)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👦🏻 ❤️ 🐻 Osaka Trip | 前3天終極指南</title>
     <style>
+        :root {
+            --primary-pink: #ffb7b2;
+            --accent-orange: #ffdac1;
+            --text-dark: #4a4a4a;
+            --text-muted: #8e8e8e;
+            --time-blue: #70a1ff;
+            --tag-no-beef: #ff6b6b;
+            --tag-budget: #2ed573;
+            --tag-express: #a55eea;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333333;
-            background-color: #fcfbfa;
+            color: var(--text-dark);
+            /* 浪漫微甜櫻花漸變背景 */
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 50%, #fff0e6 100%);
+            background-attachment: fixed;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
         }
+
         .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 650px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.85);
+            /* 毛玻璃質感，輕盈乾淨 */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 30px 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(255, 183, 178, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
-        h1 {
+
+        .header-area {
             text-align: center;
-            color: #2c3e50;
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        .subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 14px;
             margin-bottom: 30px;
+            position: relative;
         }
-        .section-title {
-            font-size: 18px;
-            color: #2c3e50;
-            border-left: 5px solid #e67e22;
-            padding-left: 10px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-weight: bold;
+
+        h1 {
+            color: #ff7675;
+            font-size: 26px;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .heart-divider {
+            font-size: 14px;
+            color: #ff7675;
+            margin: 10px 0;
+        }
+
         .day-card {
-            background: #fafafa;
-            border: 1px solid #eaeaea;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.2s;
         }
+
+        .day-card:hover {
+            transform: translateY(-2px);
+        }
+
         .day-header {
             font-size: 16px;
-            font-weight: bold;
-            color: #d35400;
+            font-weight: 700;
+            color: #e17055;
             margin-bottom: 15px;
-            border-bottom: 1px dashed #ddd;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed rgba(255, 118, 117, 0.2);
+            display: flex;
+            align-items: center;
         }
+
         .timeline {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
         .timeline li {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             font-size: 14px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
         }
+
+        .timeline li:last-child {
+            margin-bottom: 0;
+        }
+
         .time {
-            font-weight: bold;
-            color: #2980b9;
-            display: inline-block;
-            width: 90px;
+            font-weight: 700;
+            color: var(--time-blue);
+            min-width: 85px;
+            flex-shrink: 0;
+            background: rgba(112, 161, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 12px;
+            margin-right: 10px;
+            margin-top: 1px;
         }
+
+        .event-detail {
+            flex-grow: 1;
+        }
+
+        /* 標籤設計 */
         .badge {
-            background-color: #e74c3c;
+            background-color: var(--tag-no-beef);
             color: white;
-            padding: 2px 6px;
+            padding: 1px 5px;
             border-radius: 4px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             margin-left: 5px;
+            display: inline-block;
         }
+
         .badge-budget {
-            background-color: #27ae60;
+            background-color: var(--tag-budget);
             color: white;
-            padding: 2px 6px;
+            padding: 1px 5px;
             border-radius: 4px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             margin-left: 5px;
+            display: inline-block;
         }
+
         .badge-express {
-            background-color: #9b59b6;
+            background-color: var(--tag-express);
             color: white;
-            padding: 2px 6px;
+            padding: 1px 5px;
             border-radius: 4px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             margin-left: 5px;
+            display: inline-block;
         }
+
+        .section-title {
+            font-size: 16px;
+            color: #2c3e50;
+            font-weight: 700;
+            margin: 30px 0 15px 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 表格精細優化 */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 14px;
+            border: 1px solid rgba(0,0,0,0.05);
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
+            font-size: 13px;
         }
+
         th, td {
-            border: 1px solid #eaeaea;
-            padding: 10px;
+            padding: 12px 14px;
             text-align: left;
         }
+
         th {
-            background-color: #f5f5f5;
-            color: #2c3e50;
+            background-color: #fff0f0;
+            color: #ff7675;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255, 118, 117, 0.1);
         }
+
+        td {
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .total-row {
+            font-weight: 700;
+            background-color: #fff9f9;
+            color: #d63031;
+        }
+
+        /* 底部 tips 樣式 */
+        .tips-box {
+            background: rgba(255, 234, 167, 0.25);
+            border: 1px dashed #ffeaa7;
+            border-radius: 14px;
+            padding: 15px 20px;
+            margin-top: 25px;
+        }
+
+        .tips-box ul {
+            padding-left: 15px;
+            margin: 8px 0 0 0;
+            font-size: 13px;
+        }
+
+        .tips-box li {
+            margin-bottom: 8px;
+        }
+
         .footer {
             text-align: center;
             margin-top: 40px;
-            font-size: 12px;
-            color: #95a5a6;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+            font-size: 11px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>👦🏻 與 🐻 大阪甜蜜之旅</h1>
-    <div class="subtitle">前 3 天精確時間軸、無牛美食與極致預算指南 (USJ更新版)</div>
+    <div class="header-area">
+        <h1>👦🏻 ❤️ 🐻 大阪甜蜜之旅</h1>
+        <div class="subtitle">前 3 天精確時間軸・無牛美食・醒目預算指南</div>
+        <div class="heart-divider">🌸 ┈┈┈┈ 🧸 ┈┈┈┈ 🌸</div>
+    </div>
 
     <div class="day-card">
         <div class="day-header">📆 Day 1：6月27日 (六) — 抵達、動漫潮流與頂級豬排</div>
         <ul class="timeline">
-            <li><span class="time">06:15</span>🎒 <b>香港機場 T1</b> 集合，辦理登機手續</li>
-            <li><span class="time">08:15-13:05</span>✈️ <b>大灣區航空 HB340</b> 飛往大阪關西機場 (T1)</li>
-            <li><span class="time">13:05-14:30</span>🛂 預計清關、提領行李並入境</li>
-            <li><span class="time">14:35-15:15</span>🚄 搭乘 <b>南海電鐵特急 Rapi:t</b> 直達南海難波站</li>
-            <li><span class="time">15:15-15:45</span>🚶 <b>全能男友帶路（免淋雨）：</b> 出閘降到 B1 地下街，沿 Namba Walk 步行直達 <b>Hotel Monterey Grasmere Osaka</b> Check-in 放行李</li>
-            <li><span class="time">16:15-17:45</span>🥞 <b>Bibi’s Cafe Bar</b> 下午茶<span class="badge">無牛</span><span class="badge-budget">平玩建議: 兩人合點一份草莓千層酥</span></li>
-            <li><span class="time">18:00-19:45</span>🛍️ <b>心齋橋 PARCO 6樓</b> 陪 🐻 狂逛 Chiikawa、吉卜力、扭蛋打卡</li>
-            <li><span class="time">20:00-21:30</span>🐖 <b>とんかつ なぎかつ</b> 頂級炸豬排晚餐<span class="badge">無牛</span><span class="badge-budget">預算: 每人約 ¥1,800 - ¥2,500</span></li>
-            <li><span class="time">21:45+</span>📸 <b>道頓堀散步</b> 看夜景、與固力果跑跑人霓虹燈大合照，經地下街回酒店休息</li>
+            <li><span class="time">06:15</span><div class="event-detail">🎒 <b>香港機場 T1</b> 集合，辦理登機手續</div></li>
+            <li><span class="time">08:15-13:05</span><div class="event-detail">✈️ <b>大灣區航空 HB340</b> 飛往大阪關西機場 (T1)</div></li>
+            <li><span class="time">13:05-14:30</span><div class="event-detail">🛂 預計清關、提領行李並入境</div></li>
+            <li><span class="time">14:35-15:15</span><div class="event-detail">🚄 搭乘 <b>南海電鐵特急 Rapi:t</b> 直達南海難波站</div></li>
+            <li><span class="time">15:15-15:45</span><div class="event-detail">🚶 <b>全能男友帶路（免淋雨）：</b> 出閘降到 B1 地下街，沿 Namba Walk 步行直達 <b>Hotel Monterey Grasmere Osaka</b> Check-in 放低行李</div></li>
+            <li><span class="time">16:15-17:45</span><div class="event-detail">🥞 <b>Bibi’s Cafe Bar</b> 下午茶<span class="badge">無牛</span><span class="badge-budget">兩人合點一份草莓千層酥</span></div></li>
+            <li><span class="time">18:00-19:45</span><div class="event-detail">🛍️ <b>心齋橋 PARCO 6樓</b> 陪 🐻 狂逛 Chiikawa、吉卜力、扭蛋打卡</div></li>
+            <li><span class="time">20:00-21:30</span><div class="event-detail">🐖 <b>とんかつ なぎかつ</b> 頂級炸豬排晚餐<span class="badge">無牛</span><span class="badge-budget">每人約 ¥1,800 - ¥2,500</span></div></li>
+            <li><span class="time">21:45+</span><div class="event-detail">📸 <b>道頓堀散步</b> 看夜景、與固力果跑跑人霓虹燈大合照，經地下街回酒店休息</div></li>
         </ul>
     </div>
 
     <div class="day-card">
         <div class="day-header">📆 Day 2：6月28日 (日) — USJ 快速通關完美狂歡夜</div>
         <ul class="timeline">
-            <li><span class="time">07:15-07:45</span>🚇 搭 JR 難波站 ➡️ 西九條站 ➡️ 環球城站。入園前穿好雨衣、防滑鞋</li>
-            <li><span class="time">08:15-11:30</span>🧙‍♂️ <b>上午攻略：</b> 入園優先衝刺「哈利波特魔法世界」及「小小兵樂園」（皆為室內，無懼雨天）</li>
-            <li><span class="time">11:30-13:00</span>🦈 <b>時間隨意：</b> 使用快速通關暢玩 <b>【大白鯊 (JAWS)】</b><span class="badge-express">Express 1</span>，並在附近吃火雞大火腿補充體力</li>
-            <li><span class="time">13:30-14:30</span>🌟 <b>全日焦點：</b> 提早卡位觀看 <b>14:00 「NO LIMIT! 遊行」最後一天演出的終極狂歡！</b></li>
-            <li><span class="time">14:45-16:00</span>🦖 <b>時間隨意：</b> 使用快速通關挑戰 <b>【飛天翼手龍 (The Flying Dinosaur)】</b><span class="badge-express">Express 2</span>，體驗雨中飛翔的刺激</li>
-            <li><span class="time">16:30</span>🍄 <b>核心高光開始：</b> 持快速通關進入 <b>【超級任天堂世界™】</b> (進場後不可再入場)</li>
-            <li><span class="time">16:30-17:00</span>🏎️ <b>【瑪利歐賽車～庫巴的挑戰書～】</b><span class="badge-express">Express 3</span> 進行AR科技賽車對決</li>
-            <li><span class="time">17:00-17:30</span>🦍 <b>【大金剛的瘋狂熱帶過山車】</b><span class="badge-express">Express 4</span> 暢玩最新園區的瘋狂礦車！</li>
-            <li><span class="time">17:45-19:00</span>📸 在任天堂園區內盡情打卡、購買限定週邊商品，喝奶油啤酒</li>
-            <li><span class="time">19:30-20:30</span>🏰 散步回哈利波特園區，拍攝夜晚亮燈の霍格華茲城堡夜景與黑湖倒影</li>
-            <li><span class="time">20:45-21:30</span>🚇 搭 JR 返回難波，回酒店放低戰利品，讓 🐻 換雙舒服的鞋</li>
-            <li><span class="time">22:00-23:30</span>🍻 <b>【已預訂】炭火燒鳥 Enya 難波3號店</b><span class="badge">無牛</span> 慶功宴！90分鐘暢飲，大口吃雞肉串</li>
+            <li><span class="time">07:15-07:45</span><div class="event-detail">🚇 搭 JR 難波站 ➡️ 西九條站 ➡️ 環球城站。入園前穿好雨衣、防滑鞋</div></li>
+            <li><span class="time">08:15-11:30</span><div class="event-detail">🧙‍♂️ <b>上午攻略：</b> 入園優先衝刺「哈利波特魔法世界」及「小小兵樂園」</div></li>
+            <li><span class="time">11:30-13:00</span><div class="event-detail">🦈 <b>時間隨意：</b> 使用快速通關暢玩 <b>【大白鯊 (JAWS)】</b><span class="badge-express">Express 1</span></div></li>
+            <li><span class="time">13:30-14:30</span><div class="event-detail">🌟 <b>全日焦點：</b> 提早卡位觀看 <b>14:00 「NO LIMIT! 遊行」最後一天</b></div></li>
+            <li><span class="time">14:45-16:00</span><div class="event-detail">🦖 <b>時間隨意：</b> 使用快速通關挑戰 <b>【飛天翼手龍】</b><span class="badge-express">Express 2</span></div></li>
+            <li><span class="time">16:30</span><div class="event-detail">🍄 <b>核心高光開始：</b> 持快速通關進入 <b>【超級任天堂世界™】</b> (不可再入場)</div></li>
+            <li><span class="time">16:30-17:00</span><div class="event-detail">🏎️ <b>【瑪利歐賽車～庫巴的挑戰書～】</b><span class="badge-express">Express 3</span> AR賽車</div></li>
+            <li><span class="time">17:00-17:30</span><div class="event-detail">🦍 <b>【大金剛的瘋狂熱帶過山車】</b><span class="badge-express">Express 4</span> 暢玩最新園區！</div></li>
+            <li><span class="time">17:45-19:00</span><div class="event-detail">📸 在任天堂園區內盡情打卡、買週邊、喝奶油啤酒</div></li>
+            <li><span class="time">19:30-20:30</span><div class="event-detail">🏰 散步回哈利波特園區，拍攝夜晚亮燈の霍格華茲城堡夜景與黑湖倒影</div></li>
+            <li><span class="time">20:45-21:30</span><div class="event-detail">🚇 搭 JR 返回難波，回酒店放低東西，讓 🐻 換雙舒服的鞋</div></li>
+            <li><span class="time">22:00-23:30</span><div class="event-detail">🍻 <b>【已預訂】炭火燒鳥 Enya 難波3號店</b><span class="badge">無牛</span> 90 分鐘暢飲串燒宴</div></li>
         </ul>
     </div>
 
     <div class="day-card">
         <div class="day-header">📆 Day 3：6月29日 (一) — 療癒奈良鹿與無牛釜飯</div>
         <ul class="timeline">
-            <li><span class="time">09:30-10:15</span>🚇 近鐵難波站 ➡️ 搭近鐵奈良線（快速急行，免特急費）直達近鐵奈良站</li>
-            <li><span class="time">10:30-12:30</span>🦌 <b>奈良公園</b> 餵小鹿拍照 ➡️ 參觀全室內 <b>東大寺大佛殿</b> (最強雨備)</li>
-            <li><span class="time">12:30-14:00</span>🍚 <b>釜飯 志津香（公園店）</b> 午餐<span class="badge">無牛</span> 必點「奈良七種釜飯」海鮮雞肉底<span class="badge-budget">預算: 每人約 ¥1,500 - ¥2,200</span></li>
-            <li><span class="time">14:00-15:30</span>🛍️ 逛東向商店街（有頂棚），買<b>大佛布丁</b>，吃 <b>天極堂</b> 黑糖葛切</li>
-            <li><span class="time">15:30-16:30</span>🚇 搭乘近鐵輕鬆返回大阪難波</li>
-            <li><span class="time">17:00-20:00</span>🛍️ 難波/心齋橋平價藥妝與服飾最後補齊</li>
-            <li><span class="time">20:30</span>🏮 <b>新世界元祖串炸達摩（難波店）</b> 晚餐<span class="badge">無牛</span> 專攻炸豬排、炸蝦、炸蔬菜</li>
+            <li><span class="time">09:30-10:15</span><div class="event-detail">🚇 近鐵難波站 ➡️ 搭近鐵奈良線（快速急行）直達近鐵奈良站</div></li>
+            <li><span class="time">10:30-12:30</span><div class="event-detail">🦌 <b>奈良公園</b> 餵小鹿拍照 ➡️ 參觀全室內 <b>東大寺大佛殿</b></div></li>
+            <li><span class="time">12:30-14:00</span><div class="event-detail">🍚 <b>釜飯 志津香</b> 午餐<span class="badge">無牛</span> 必點「奈良七種釜飯」<span class="badge-budget">每人約 ¥1,500 - ¥2,200</span></div></li>
+            <li><span class="time">14:00-15:30</span><div class="event-detail">🛍️ 逛東向商店街，買<b>大佛布丁</b>，吃 <b>天極堂</b> 黑糖葛切</div></li>
+            <li><span class="time">15:30-16:30</span><div class="event-detail">🚇 搭乘近鐵輕鬆返回大阪難波</div></li>
+            <li><span class="time">17:00-20:00</span><div class="event-detail">🛍️ 難波/心齋橋平價藥妝與服飾最後補齊</div></li>
+            <li><span class="time">20:30</span><div class="event-detail">🏮 <b>新世界元祖串炸達摩（難波店）</b> 晚餐<span class="badge">無牛</span> 專攻炸豬排、炸蝦、炸蔬菜</div></li>
         </ul>
     </div>
 
-    <div class="section-title">💰 前 3 天交通金錢預算表 (2人總合計)</div>
-    <table>
-        <thead>
-            <tr>
-                <th>項目</th>
-                <th>預估金額 (日圓)</th>
-                <th>支付與控管方式</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>南海電鐵 Rapi:t 來回</b></td>
-                <td>約 ¥5,800</td>
-                <td>建議出發前在 Klook/KKday 網上先買好 QR Code</td>
-            </tr>
-            <tr>
-                <td><b>Day 1 市區 (難波 ⇄ 心齋橋)</b></td>
-                <td>¥760</td>
-                <td>直接嘟 iPhone 內置的 ICOCA / Suica 卡</td>
-            </tr>
-            <tr>
-                <td><b>Day 2 USJ 來回車資</b></td>
-                <td>¥840</td>
-                <td>直接嘟 iPhone 內置的 ICOCA / Suica 卡</td>
-            </tr>
-            <tr>
-                <td><b>Day 3 奈良來回車資</b></td>
-                <td>¥2,720</td>
-                <td>直接嘟 iPhone 內置的 ICOCA / Suica 卡</td>
-            </tr>
-            <tr>
-                <td><b>奈良鹿仙貝 (一包)</b></td>
-                <td>¥200</td>
-                <td><b>*必需準備現金</b> (現場只收現)</td>
-            </tr>
-            <tr style="font-weight: bold; background-color: #fff9f2;">
-                <td>前 3 天基本交通總計</td>
-                <td>約 ¥10,320 日圓</td>
-                <td>折合約 $500 港幣 (每人手機預先增值 ¥3000 即夠用)</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="section-title">💸 前 3 天交通預算明細 (2人合計)</div>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>預估金額 (日圓)</th>
+                    <th>控管方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>南海電鐵 Rapi:t 來回</b></td>
+                    <td>約 ¥5,800</td>
+                    <td>出發前在網上買好 QR Code</td>
+                </tr>
+                <tr>
+                    <td><b>Day 1 市區 (難波 ⇄ 心齋橋)</b></td>
+                    <td>¥760</td>
+                    <td>直接拍手機內置的 ICOCA / Suica</td>
+                </tr>
+                <tr>
+                    <td><b>Day 2 USJ 來回車資</b></td>
+                    <td>¥840</td>
+                    <td>直接拍手機內置的 ICOCA / Suica</td>
+                </tr>
+                <tr>
+                    <td><b>Day 3 奈良來回車資</b></td>
+                    <td>¥2,720</td>
+                    <td>直接拍手機內置的 ICOCA / Suica</td>
+                </tr>
+                <tr>
+                    <td><b>奈良鹿仙貝 (一包)</b></td>
+                    <td>¥200</td>
+                    <td><b>*必需準備現金</b></td>
+                </tr>
+                <tr class="total-row">
+                    <td>基本交通總計</td>
+                    <td>約 ¥10,320 日圓</td>
+                    <td>折合約 $500 港幣 (AA公數無壓力)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <div class="section-title">💡 醒目男友平玩小 Tips</div>
-    <ul style="font-size: 14px; padding-left: 20px;">
-        <li><b>落機即成立公數基金：</b> 兩人各出 ¥15,000 日圓現金放同一個袋，正餐、車資增值直接從入面扣，毫無經濟壓力。</li>
-        <li><b>Cafe 分食策略：</b> 在 Bibi's Cafe 兩人 share 一份草莓千層酥，既精明又能打卡。</li>
-        <li><b>轉移高光時刻：</b> 大餐走公數，但陪 🐻 在 PARCO 扭蛋（¥400）或去販売機投熱茶（¥160）時由你掏錢，小錢帶來大貼心！</li>
-    </ul>
+    <div class="tips-box">
+        <div style="font-weight: 700; color: #d63031;">💡 醒目男友平玩小攻略</div>
+        <ul>
+            <li><b>落機即開公數袋：</b> 兩人各出 ¥15,000 日圓，正餐、車資、門票直接用公數付，輕鬆省心。</li>
+            <li><b>Cafe 甜蜜分食：</b> Cafe 或 HARBS 兩人 share 一份甜品，省錢又能試更多口味，還更甜蜜！</li>
+            <li><b>高光時刻轉移：</b> 大開銷用公數，但陪 🐻 扭蛋（¥400）或去販賣機投熱茶（¥160）時你主動掏錢，花小錢買大貼心！</li>
+        </ul>
+    </div>
 
     <div class="footer">
-        祝 👦🏻 與 🐻 大阪慶功之旅甜蜜順利！放低期權股票，好好享受當下！✨
+        祝 👦🏻 與 🐻 大阪慶功之旅甜蜜順利！放低壓力，好好享受屬於你哋嘅當下！✨
     </div>
 </div>
 
